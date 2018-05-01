@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42709DA22098E6B300A71DD4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42709DA12098E6B300A71DD4 /* main.cpp */; };
+		42709DA32098E75100A71DD4 /* user.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428397C320867BB600C08940 /* user.cpp */; };
 		4270F4572092E88D009628B0 /* constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4270F4562092E88D009628B0 /* constants.cpp */; };
 		428032022089144200D86F8E /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428031FF2089144200D86F8E /* ofApp.cpp */; };
-		428397C420867BB600C08940 /* user.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 428397C320867BB600C08940 /* user.cpp */; };
-		42F47A002098E3A600F573F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42F479FF2098E3A600F573F2 /* main.cpp */; };
 		9CF4130A7E6DA19A3DC42B9A /* ofxSmartFont.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C954E0E8B7DB9D6983309883 /* ofxSmartFont.cpp */; };
 		C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */; };
 		D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E3B8F332A1A3C7EDF4998 /* ofxDatGuiComponent.cpp */; };
@@ -54,6 +54,7 @@
 		26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGui.cpp; path = ../../../addons/ofxDatGui/src/ofxDatGui.cpp; sourceTree = SOURCE_ROOT; };
 		422C3B1D2098DD280023E831 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		422C4E1AAC7EC4D30B17702D /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiIntObject.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
+		42709DA12098E6B300A71DD4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "../../../../../../Downloads/final-project-joshuakim0724-master 2/src/main.cpp"; sourceTree = "<group>"; };
 		4270F4552092E88D009628B0 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		4270F4562092E88D009628B0 /* constants.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = constants.cpp; sourceTree = "<group>"; };
 		428031FF2089144200D86F8E /* ofApp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofApp.cpp; path = ../../../../../../.Trash/ofApp.cpp; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		428397C520867C0600C08940 /* DEVELOPMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/DEVELOPMENT.md"; sourceTree = "<group>"; };
 		428397C620867C0600C08940 /* PROPOSAL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = PROPOSAL.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/PROPOSAL.md"; sourceTree = "<group>"; };
 		428397C720867C0600C08940 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/README.md"; sourceTree = "<group>"; };
-		42F479FF2098E3A600F573F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../../../Desktop/main.cpp; sourceTree = "<group>"; };
 		545BBA6F6669BED2DA497BC6 /* ofxDatGuiScrollView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiScrollView.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiScrollView.h; sourceTree = SOURCE_ROOT; };
 		64C563B8158C37E9D07AE29D /* ofxDatGuiFRM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiFRM.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiFRM.h; sourceTree = SOURCE_ROOT; };
 		744031A3E8F8DAF9FE6F3EA8 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiGroups.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
@@ -210,7 +210,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				42F479FF2098E3A600F573F2 /* main.cpp */,
+				42709DA12098E6B300A71DD4 /* main.cpp */,
 				428031FF2089144200D86F8E /* ofApp.cpp */,
 				428032002089144200D86F8E /* ofApp.h */,
 				428397C320867BB600C08940 /* user.cpp */,
@@ -330,11 +330,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42709DA32098E75100A71DD4 /* user.cpp in Sources */,
 				428032022089144200D86F8E /* ofApp.cpp in Sources */,
-				428397C420867BB600C08940 /* user.cpp in Sources */,
 				4270F4572092E88D009628B0 /* constants.cpp in Sources */,
 				D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */,
-				42F47A002098E3A600F573F2 /* main.cpp in Sources */,
+				42709DA22098E6B300A71DD4 /* main.cpp in Sources */,
 				C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */,
 				9CF4130A7E6DA19A3DC42B9A /* ofxSmartFont.cpp in Sources */,
 			);
