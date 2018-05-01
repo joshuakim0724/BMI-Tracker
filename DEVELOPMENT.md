@@ -27,3 +27,7 @@ Day 6
 Implemented the AddCalorie button
 Created and implemented a label which shows total calories inputted
 sdasd
+
+Day 7
+MAJOR PROBLEM: Accidently force pushed in terminal which removed all my previous commits
+Had major errors committing, file references were all over the place, but after going to office hours and messing around a lot seems to be working.

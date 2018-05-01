@@ -56,14 +56,14 @@
 		422C4E1AAC7EC4D30B17702D /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiIntObject.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
 		4270F4552092E88D009628B0 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
 		4270F4562092E88D009628B0 /* constants.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = constants.cpp; sourceTree = "<group>"; };
-		428397C520867C0600C08940 /* DEVELOPMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = DEVELOPMENT.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/DEVELOPMENT.md"; sourceTree = "<group>"; };
-		428397C620867C0600C08940 /* PROPOSAL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = PROPOSAL.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/PROPOSAL.md"; sourceTree = "<group>"; };
-		428397C720867C0600C08940 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = "../../../../../CLionProjects/final-project-joshuakim0724/README.md"; sourceTree = "<group>"; };
 		42CF683A2098FB2E00C981BF /* user.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = user.cpp; sourceTree = "<group>"; };
 		42CF683B2098FB2E00C981BF /* user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
 		42CF683D2098FB7A00C981BF /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		42CF683F2098FBE100C981BF /* ofApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ofApp.h; sourceTree = "<group>"; };
 		42CF68402098FBE100C981BF /* ofApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofApp.cpp; sourceTree = "<group>"; };
+		42CF68422098FC5300C981BF /* DEVELOPMENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = DEVELOPMENT.md; sourceTree = "<group>"; };
+		42CF68432098FC5E00C981BF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		42CF68442098FC5E00C981BF /* PROPOSAL.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PROPOSAL.md; sourceTree = "<group>"; };
 		545BBA6F6669BED2DA497BC6 /* ofxDatGuiScrollView.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiScrollView.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiScrollView.h; sourceTree = SOURCE_ROOT; };
 		64C563B8158C37E9D07AE29D /* ofxDatGuiFRM.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiFRM.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiFRM.h; sourceTree = SOURCE_ROOT; };
 		744031A3E8F8DAF9FE6F3EA8 /* ofxDatGuiGroups.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiGroups.h; path = ../../../addons/ofxDatGui/src/components/ofxDatGuiGroups.h; sourceTree = SOURCE_ROOT; };
@@ -193,10 +193,10 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				42CF68422098FC5300C981BF /* DEVELOPMENT.md */,
+				42CF68442098FC5E00C981BF /* PROPOSAL.md */,
+				42CF68432098FC5E00C981BF /* README.md */,
 				422C3B1D2098DD280023E831 /* .gitignore.md */,
-				428397C520867C0600C08940 /* DEVELOPMENT.md */,
-				428397C620867C0600C08940 /* PROPOSAL.md */,
-				428397C720867C0600C08940 /* README.md */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
