@@ -12,17 +12,18 @@ public:
     void update();
     void draw();
     
-    void GetUserInfo();
-    bool ReturningUser();
+    void getUserInfo();
+    bool returningUser();
     
     ofxDatGui* user_gui;
     ofxDatGui* calorie_gui;
     ofxDatGuiLabel* calorie_label;
     
-    ofxDatGuiButton* button_;
+    ofxDatGuiButton* clicker_button;
     ofxDatGuiButton* calorie_add;
     ofxDatGuiButton* calorie_remove;
     ofxDatGuiButton* new_day_button;
+    ofxDatGuiButton* show_data_button;
     
     bool mFullscreen;
     void refreshWindow();
@@ -31,6 +32,8 @@ public:
     void onButtonEvent(ofxDatGuiButtonEvent e);
     void onToggleEvent(ofxDatGuiToggleEvent e);
     void positionButtons();
+    void positionLabels();
+    void setUpSliders();
     
     ofTrueTypeFont font;
 };

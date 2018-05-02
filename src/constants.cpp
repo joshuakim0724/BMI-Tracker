@@ -18,10 +18,12 @@ const string HEIGHT_ = "** Height: ";
 const string GENDER_ = "** Gender: ";
 const string ACTIVITY_FACTOR = "** Activity Factor: ";
 
-const string CLICKER_BUTTON = "CLICK ME";
 const string CALORIE_BUTTON = "Add Calories";
 const string CALORIE_REMOVE = "Remove Calories";
 const string NEW_DAY_BUTTON = "New Day";
+const string DATA_BUTTON = "Show Past 10 Days";
+
+const string CLICKER_BUTTON = "CLICK ME";
 const string TFULLSCREEN_ = "toggle fullscreen";
 const string CLICKED_ = "YOU CLICKED ME ";
 const string TIMES_ = " TIMES";
