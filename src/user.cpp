@@ -59,6 +59,10 @@ void User::setGender(string gender) {
     this->gender_ = gender;
 }
 
+void User::setCalories(int calories) {
+    this->calories_ = calories;
+}
+
 void User::setUserActivity(int factor) {
     this->activity_ = factor;
 }

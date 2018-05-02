@@ -16,6 +16,8 @@
 
 using std::string;
 
-void SaveToFile(std::ofstream &file_reader, string filename, User user);
+void SaveToFile(string filename, User user);
+
+User CreateUserFromFile(string filename);
 
 #endif /* fileReader_hpp */

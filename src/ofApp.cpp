@@ -70,7 +70,7 @@ void ofApp::update()
     new_day_button->update();
 
     calorie_label->update();
-    
+    SaveToFile(FILE_PATH, user);
 }
 
 void ofApp::draw()
@@ -93,7 +93,7 @@ void ofApp::onButtonEvent(ofxDatGuiButtonEvent e)
     } else if (e.target->getLabel() == CALORIE_REMOVE) {
         user.RemoveCaloriesFromInput();
     } else if (e.target->getLabel() == "New Day") {
-        user.ResetCalories();
+        user.NewDay();
     }
 }
 
@@ -134,5 +134,5 @@ void ofApp::GetUserInfo() {
     user.GetUserGender();
     user.GetUserActivity();
     
-    SaveToFile(file_reader, "userinfo.txt", user);
+    SaveToFile(FILE_PATH, user);
 }

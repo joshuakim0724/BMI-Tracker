@@ -40,3 +40,5 @@ const string FEMALE_ = "female";
 
 const string CALORIE_GOAL = "Calorie Goal: ";
 const string TODAY_CALORIE = "Today's Calories: ";
+
+const string FILE_PATH = "/Users/Joshua/Desktop/userinfo.txt";

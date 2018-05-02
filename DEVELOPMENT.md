@@ -31,3 +31,6 @@ sdasd
 Day 7
 MAJOR PROBLEM: Accidently force pushed in terminal which removed all my previous commits
 Had major errors committing, file references were all over the place, but after going to office hours and messing around a lot seems to be working.
+
+Day 8
+Having problems with exporting to a text file... Its not exporting or creating a text file because its not in the main method... not sure what to do atm.

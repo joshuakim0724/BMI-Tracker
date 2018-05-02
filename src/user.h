@@ -47,6 +47,7 @@ public:
     void setHeight(double height);
     void setGender(string gender);
     void setUserActivity(int factor);
+    void setCalories(int calories);
 
     // Methods used to get average calories per day
     bool IsMale();
