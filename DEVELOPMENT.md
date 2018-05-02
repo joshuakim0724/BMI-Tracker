@@ -34,3 +34,5 @@ Had major errors committing, file references were all over the place, but after 
 
 Day 8
 Having problems with exporting to a text file... Its not exporting or creating a text file because its not in the main method... not sure what to do atm.
+- After doing a lot of research, I found a work around by directing the file path
+Created more fileReader methods
