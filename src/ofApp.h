@@ -15,7 +15,8 @@ public:
     void GetUserInfo();
     bool ReturningUser();
     
-    ofxDatGui* gui_;
+    ofxDatGui* user_gui;
+    ofxDatGui* calorie_gui;
     ofxDatGuiLabel* calorie_label;
     
     ofxDatGuiButton* button_;

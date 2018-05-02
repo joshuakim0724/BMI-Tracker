@@ -19,10 +19,10 @@ void ofApp::setup()
     ofSetWindowShape(1920, 1080);
     ofSetWindowPosition(ofGetScreenWidth()/2 - ofGetWidth()/2, 0);
 
-    gui_ = new ofxDatGui( ofxDatGuiAnchor::TOP_RIGHT );
+    user_gui = new ofxDatGui( ofxDatGuiAnchor::TOP_RIGHT );
     
     // add a folder to group a few components together //
-    ofxDatGuiFolder* folder = gui_->addFolder(USER_INFO, ofColor::white);
+    ofxDatGuiFolder* folder = user_gui->addFolder(USER_INFO, ofColor::white);
     folder->addLabel(AGE_ + to_string(user.getAge()));
     folder->addLabel(WEIGHT_ + to_string(user.getWeight()) + POUNDS_);
     folder->addLabel(HEIGHT_ + to_string(user.getHeight() / 12) + "''" + to_string(user.getHeight() % 12));
@@ -30,13 +30,13 @@ void ofApp::setup()
     folder->addLabel(ACTIVITY_FACTOR + to_string(user.getUserActivity()));
 
     folder->expand();
-    gui_->addBreak();
+    user_gui->addBreak();
     
-    gui_->addLabel(CALORIE_GOAL + to_string((int)user.CalculateCalories(user.getUserActivity())));
+    user_gui->addLabel(CALORIE_GOAL + to_string((int)user.CalculateCalories(user.getUserActivity())));
     
     // and a couple of simple buttons //
-    gui_->addToggle(TFULLSCREEN_, false); // Fullscreen button
-    button_ = gui_->addButton(CLICKER_BUTTON); // Clicker counter button
+    user_gui->addToggle(TFULLSCREEN_, false); // Fullscreen button
+    button_ = user_gui->addButton(CLICKER_BUTTON); // Clicker counter button
     calorie_add = new ofxDatGuiButton(CALORIE_BUTTON); // Calorie adder button
     calorie_remove = new ofxDatGuiButton(CALORIE_REMOVE); // Calorie remover button
     new_day_button = new ofxDatGuiButton(NEW_DAY_BUTTON); // Resets the day
@@ -54,8 +54,8 @@ void ofApp::setup()
     calorie_remove->onButtonEvent(this, &ofApp::onButtonEvent);
     new_day_button->onButtonEvent(this, &ofApp::onButtonEvent);
 
-    gui_->onButtonEvent(this, &ofApp::onButtonEvent);
-    gui_->onToggleEvent(this, &ofApp::onToggleEvent);
+    user_gui->onButtonEvent(this, &ofApp::onButtonEvent);
+    user_gui->onToggleEvent(this, &ofApp::onToggleEvent);
     positionButtons();
     
     // launch the app //
@@ -109,7 +109,7 @@ void ofApp::onToggleEvent(ofxDatGuiToggleEvent e)
 void ofApp::toggleFullscreen()
 {
     mFullscreen = !mFullscreen;
-    gui_->getToggle(TFULLSCREEN_)->setChecked(mFullscreen);
+    user_gui->getToggle(TFULLSCREEN_)->setChecked(mFullscreen);
     refreshWindow();
 }
 
