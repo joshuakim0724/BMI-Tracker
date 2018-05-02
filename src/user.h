@@ -24,7 +24,7 @@ private:
     // Information about daily calories
     int activity_;
     int calories_ = 0;
-    std::vector<int> calories_tracker; // Get a better name(?) Kinda weird
+    std::vector<int> calories_tracker;
     
 public:
 
@@ -38,6 +38,7 @@ public:
     int getHeight();
     string getGender();
     int getCalories();
+    std::vector<int> getCaloriesTracker();
     int getUserActivity();
     
     // Setters

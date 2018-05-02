@@ -1,10 +1,14 @@
 #include "ofApp.h"
 #include "user.h"
 #include "constants.cpp"
+#include "fileReader.h"
+
 User user;
 
 void ofApp::setup()
 {
+    file_reader.open("userinfo.txt");
+
     // Gets user information, then sets up the GUI
     GetUserInfo();
     font.load(VERDANA_FONT, 24);
@@ -66,6 +70,7 @@ void ofApp::update()
     new_day_button->update();
 
     calorie_label->update();
+    
 }
 
 void ofApp::draw()
@@ -128,4 +133,6 @@ void ofApp::GetUserInfo() {
     user.GetUserHeight();
     user.GetUserGender();
     user.GetUserActivity();
+    
+    SaveToFile(file_reader, "userinfo.txt", user);
 }

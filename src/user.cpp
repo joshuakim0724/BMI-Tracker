@@ -38,6 +38,8 @@ string User::getGender() { return gender_; }
 
 int User::getCalories() { return calories_; }
 
+std::vector<int> User::getCaloriesTracker() { return calories_tracker; }
+
 int User::getUserActivity() { return activity_; }
 
 /*------------------------------------------Setters--------------------------------------*/

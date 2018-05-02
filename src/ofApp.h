@@ -31,6 +31,8 @@ public:
     void positionButtons();
     
     ofTrueTypeFont font;
+    
+    std::ofstream file_reader;
 };
 
 // Testing

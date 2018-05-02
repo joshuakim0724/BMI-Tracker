@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4224C95D209963D000FFB5DA /* fileReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4224C95C209963D000FFB5DA /* fileReader.cpp */; };
 		4270F4572092E88D009628B0 /* constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4270F4562092E88D009628B0 /* constants.cpp */; };
 		42CF683C2098FB2E00C981BF /* user.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF683A2098FB2E00C981BF /* user.cpp */; };
 		42CF683E2098FB7A00C981BF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CF683D2098FB7A00C981BF /* main.cpp */; };
@@ -52,6 +53,8 @@
 		1A3E3B8F332A1A3C7EDF4998 /* ofxDatGuiComponent.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGuiComponent.cpp; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiComponent.cpp; sourceTree = SOURCE_ROOT; };
 		21E1E3071CB7B11914428B62 /* ofxDatGuiThemes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiThemes.h; path = ../../../addons/ofxDatGui/src/themes/ofxDatGuiThemes.h; sourceTree = SOURCE_ROOT; };
 		26490D7CC31EF7D6ED5F925A /* ofxDatGui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxDatGui.cpp; path = ../../../addons/ofxDatGui/src/ofxDatGui.cpp; sourceTree = SOURCE_ROOT; };
+		4224C95B209963D000FFB5DA /* fileReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fileReader.h; sourceTree = "<group>"; };
+		4224C95C209963D000FFB5DA /* fileReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fileReader.cpp; sourceTree = "<group>"; };
 		422C3B1D2098DD280023E831 /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		422C4E1AAC7EC4D30B17702D /* ofxDatGuiIntObject.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxDatGuiIntObject.h; path = ../../../addons/ofxDatGui/src/core/ofxDatGuiIntObject.h; sourceTree = SOURCE_ROOT; };
 		4270F4552092E88D009628B0 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 				42CF683B2098FB2E00C981BF /* user.h */,
 				4270F4552092E88D009628B0 /* constants.h */,
 				4270F4562092E88D009628B0 /* constants.cpp */,
+				4224C95B209963D000FFB5DA /* fileReader.h */,
+				4224C95C209963D000FFB5DA /* fileReader.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -332,6 +337,7 @@
 			files = (
 				42CF68412098FBE100C981BF /* ofApp.cpp in Sources */,
 				42CF683C2098FB2E00C981BF /* user.cpp in Sources */,
+				4224C95D209963D000FFB5DA /* fileReader.cpp in Sources */,
 				4270F4572092E88D009628B0 /* constants.cpp in Sources */,
 				D3C1C48E59CAA2D68C0DD477 /* ofxDatGuiComponent.cpp in Sources */,
 				C9466C434D1CF8AB968D298D /* ofxDatGui.cpp in Sources */,
