@@ -16,8 +16,10 @@ public:
     
     ofxDatGui* gui_;
     ofxDatGuiLabel* calorie_label;
+    
     ofxDatGuiButton* button_;
-    ofxDatGuiButton* calorie_button;
+    ofxDatGuiButton* calorie_add;
+    ofxDatGuiButton* calorie_remove;
     ofxDatGuiButton* new_day_button;
     
     bool mFullscreen;

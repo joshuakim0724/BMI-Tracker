@@ -134,6 +134,10 @@ void User::AddCalories(int num) {
     calories_ += num;
 }
 
+void User::RemoveCalories(int num) {
+    calories_ -= num;
+}
+
 // Used to reset number of calories for the user when day is passed
 void User::ResetCalories() {
     calories_ = 0;
@@ -162,6 +166,22 @@ void User::AddCaloriesFromInput() {
     AddCalories(num_calories);
 }
 
+void User::RemoveCaloriesFromInput() {
+    string input_ = "";
+    int num_calories = 0;
+    input_ = ofSystemTextBoxDialog("Please enter number of calories");
+    
+    while (true) {
+        
+        // This code converts from string to number safely. If it fails, then asks for a new input
+        stringstream myStream(input_);
+        if (myStream >> num_calories) {
+            break;
+        }
+        input_ = ofSystemTextBoxDialog("Error: Please only enter numbers");
+    }
+    RemoveCalories(num_calories);
+}
 // These methods below will get user information from input boxes
 
 // http://www.cplusplus.com/forum/articles/6046/ Used this to learn how to use cin correctly

@@ -60,9 +60,11 @@ public:
 
     // Methods used to keep track of calories intake
     void AddCalories(int num);
+    void RemoveCalories(int num);
     void ResetCalories();
     void NewDay();
     void AddCaloriesFromInput();
+    void RemoveCaloriesFromInput();
     
     // Methods used to get information from user;
     void GetUserInfo();

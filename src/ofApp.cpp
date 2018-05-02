@@ -5,6 +5,7 @@ User user;
 
 void ofApp::setup()
 {
+    // Gets user information, then sets up the GUI
     GetUserInfo();
     font.load(VERDANA_FONT, 24);
 
@@ -15,7 +16,7 @@ void ofApp::setup()
     gui_ = new ofxDatGui( ofxDatGuiAnchor::TOP_RIGHT );
     
     // add a folder to group a few components together //
-    ofxDatGuiFolder* folder = gui_->addFolder(USER_INFO, ofColor::black);
+    ofxDatGuiFolder* folder = gui_->addFolder(USER_INFO, ofColor::white);
     folder->addLabel(AGE_ + to_string(user.getAge()));
     folder->addLabel(WEIGHT_ + to_string(user.getWeight()) + POUNDS_);
     folder->addLabel(HEIGHT_ + to_string(user.getHeight() / 12) + "''" + to_string(user.getHeight() % 12));
@@ -26,21 +27,25 @@ void ofApp::setup()
     gui_->addBreak();
     
     gui_->addLabel(CALORIE_GOAL + to_string((int)user.CalculateCalories(user.getUserActivity())));
+    
     // and a couple of simple buttons //
     gui_->addToggle(TFULLSCREEN_, false); // Fullscreen button
     button_ = gui_->addButton(CLICKER_BUTTON); // Clicker counter button
-    calorie_button = new ofxDatGuiButton(CALORIE_BUTTON); // Calorie adder button
-    new_day_button = new ofxDatGuiButton("New Day");
+    calorie_add = new ofxDatGuiButton(CALORIE_BUTTON); // Calorie adder button
+    calorie_remove = new ofxDatGuiButton(CALORIE_REMOVE); // Calorie remover button
+    new_day_button = new ofxDatGuiButton(NEW_DAY_BUTTON); // Resets the day
 
+    // Setting the button color
     button_->setStripeColor(ofColor::lightSkyBlue);
-    calorie_button->setStripeColor(ofColor::red);
+    calorie_add->setStripeColor(ofColor::red);
 
     positionButtons();
     
     calorie_label = new ofxDatGuiLabel(TODAY_CALORIE + to_string(user.getCalories())); // User Calories label
     
     // Events depending on buttons etc.
-    calorie_button->onButtonEvent(this, &ofApp::onButtonEvent);
+    calorie_add->onButtonEvent(this, &ofApp::onButtonEvent);
+    calorie_remove->onButtonEvent(this, &ofApp::onButtonEvent);
     new_day_button->onButtonEvent(this, &ofApp::onButtonEvent);
 
     gui_->onButtonEvent(this, &ofApp::onButtonEvent);
@@ -56,17 +61,21 @@ void ofApp::update()
 {
     calorie_label->setLabel("Today's Calories: " + to_string(user.getCalories()));
     button_->update();
-    calorie_button->update();
-    calorie_label->update();
+    calorie_add->update();
+    calorie_remove->update();
     new_day_button->update();
+
+    calorie_label->update();
 }
 
 void ofApp::draw()
 {
     button_->draw();
-    calorie_button->draw();
-    calorie_label->draw();
+    calorie_add->draw();
+    calorie_remove->draw();
     new_day_button->draw();
+
+    calorie_label->draw();
 }
 
 void ofApp::onButtonEvent(ofxDatGuiButtonEvent e)
@@ -76,6 +85,8 @@ void ofApp::onButtonEvent(ofxDatGuiButtonEvent e)
         button_->setLabel(CLICKED_ + ofToString(num_clicks) + TIMES_);
     } else if (e.target->getLabel() == CALORIE_BUTTON) {
         user.AddCaloriesFromInput();
+    } else if (e.target->getLabel() == CALORIE_REMOVE) {
+        user.RemoveCaloriesFromInput();
     } else if (e.target->getLabel() == "New Day") {
         user.ResetCalories();
     }
@@ -106,8 +117,9 @@ void ofApp::refreshWindow()
 
 void ofApp::positionButtons()
 {
-    calorie_button->setPosition(ofGetWidth()/2 - calorie_button->getWidth()/2, ofGetHeight()/3 - calorie_button->getHeight());
-    new_day_button->setPosition(calorie_button->getX(), calorie_button->getY() + calorie_button->getHeight() + 20);
+    calorie_add->setPosition(ofGetWidth()/2 - calorie_add->getWidth()/2, ofGetHeight()/3 - calorie_add->getHeight());
+    calorie_remove->setPosition(calorie_add->getX(), calorie_add->getY() + calorie_add->getHeight() + 20);
+    new_day_button->setPosition(calorie_remove->getX(), calorie_remove->getY() + calorie_remove->getHeight() + 20);
 }
 
 void ofApp::GetUserInfo() {
@@ -117,5 +129,3 @@ void ofApp::GetUserInfo() {
     user.GetUserGender();
     user.GetUserActivity();
 }
-
-// Testing
