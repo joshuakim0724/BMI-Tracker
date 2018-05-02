@@ -7,15 +7,17 @@ User user;
 
 void ofApp::setup()
 {
-    file_reader.open("userinfo.txt");
-
-    // Gets user information, then sets up the GUI
-    GetUserInfo();
+    if (ReturningUser()) {
+        user = CreateUserFromFile(FILE_PATH);
+    } else {
+        
+        // Gets user information, then sets up the GUI
+        GetUserInfo();
+    }
     font.load(VERDANA_FONT, 24);
 
     ofSetWindowShape(1920, 1080);
     ofSetWindowPosition(ofGetScreenWidth()/2 - ofGetWidth()/2, 0);
-
 
     gui_ = new ofxDatGui( ofxDatGuiAnchor::TOP_RIGHT );
     
@@ -135,4 +137,9 @@ void ofApp::GetUserInfo() {
     user.GetUserActivity();
     
     SaveToFile(FILE_PATH, user);
+}
+
+bool ofApp::ReturningUser() {
+    bool result = ofSystemYesNoDialoge("Returning User", "Are you a returning user?");
+    return result;
 }

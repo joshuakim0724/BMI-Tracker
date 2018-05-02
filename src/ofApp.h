@@ -13,6 +13,7 @@ public:
     void draw();
     
     void GetUserInfo();
+    bool ReturningUser();
     
     ofxDatGui* gui_;
     ofxDatGuiLabel* calorie_label;
@@ -31,8 +32,6 @@ public:
     void positionButtons();
     
     ofTrueTypeFont font;
-    
-    std::ofstream file_reader;
 };
 
 // Testing
