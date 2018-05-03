@@ -39,6 +39,10 @@ public:
     
     void onButtonEvent(ofxDatGuiButtonEvent e);
     void onToggleEvent(ofxDatGuiToggleEvent e);
+    void onDropdownEvent(ofxDatGuiDropdownEvent e);
+    void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
+    
+    
     void positionButtons();
     void positionLabels();
     void setUpSliders();

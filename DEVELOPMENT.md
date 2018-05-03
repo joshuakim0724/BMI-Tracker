@@ -40,3 +40,5 @@ Created more fileReader methods
 Day 9
 Realized some methods were working as intended, had to go fix them
 Changed my gui a lot and adding more features.
+Added a visual that shows the past 10 data
+Added more features for the user
