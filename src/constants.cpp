@@ -6,6 +6,7 @@
 //
 
 #include "constants.h"
+
 using std::string;
 
 const string VERDANA_FONT = "ofxbraitsch/fonts/Verdana.ttf";

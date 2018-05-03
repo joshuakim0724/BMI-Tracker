@@ -40,6 +40,7 @@ void SaveToFile(string filename, User user) {
 
 // This will create a User reading from the file
 // http://www.cplusplus.com/forum/general/13135/ Used this to convert string to int
+// Each line age -> weight -> height -> gender -> user activity -> calories -> data vector
 User CreateUserFromFile(string filename) {
     User returning_user;
     std::ifstream file(filename);
