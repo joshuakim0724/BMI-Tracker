@@ -42,3 +42,8 @@ Realized some methods were working as intended, had to go fix them
 Changed my gui a lot and adding more features.
 Added a visual that shows the past 10 data
 Added more features for the user
+
+Day 10
+Tried to do tests using try catch but could not figure out how to set it up
+Added more comments and rearranged things for readibility sake
+

@@ -42,12 +42,9 @@ public:
     void onDropdownEvent(ofxDatGuiDropdownEvent e);
     void onColorPickerEvent(ofxDatGuiColorPickerEvent e);
     
-    
     void positionButtons();
     void positionLabels();
     void setUpSliders();
     
     ofTrueTypeFont font;
 };
-
-// Testing
