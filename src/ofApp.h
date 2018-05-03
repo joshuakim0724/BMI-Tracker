@@ -31,7 +31,7 @@ public:
     ofxDatGuiButton* calorie_add;
     ofxDatGuiButton* calorie_remove;
     ofxDatGuiButton* new_day_button;
-    ofxDatGuiButton* show_data_button;
+    ofxDatGuiButton* data_button;
     
     bool mFullscreen;
     void refreshWindow();

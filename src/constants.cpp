@@ -21,7 +21,8 @@ const string ACTIVITY_FACTOR = "** Activity Factor: ";
 const string CALORIE_BUTTON = "Add Calories";
 const string CALORIE_REMOVE = "Remove Calories";
 const string NEW_DAY_BUTTON = "New Day";
-const string DATA_BUTTON = "Show Past 10 Days";
+const string SHOW_DATA_BUTTON = "Show Past 10 Days";
+const string CLEAR_DATA_BUTTON = "Clear Data";
 
 const string CLICKER_BUTTON = "CLICK ME";
 const string TFULLSCREEN_ = "toggle fullscreen";

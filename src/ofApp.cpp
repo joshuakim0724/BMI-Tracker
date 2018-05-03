@@ -20,7 +20,6 @@ void ofApp::setup()
 
     userGuiSetup();
     calorieGuiSetup();
-    dataGuiSetup();
     
     calorie_label = new ofxDatGuiLabel(TODAY_CALORIE + to_string(user.getCalories()));
     calorie_label->setWidth(ofGetWidth() / 7);
@@ -86,13 +85,13 @@ void ofApp::calorieGuiSetup() {
     calorie_add = calorie_gui->addButton(CALORIE_BUTTON); // Calorie adder button
     calorie_remove = calorie_gui->addButton(CALORIE_REMOVE); // Calorie remover button
     new_day_button = calorie_gui->addButton(NEW_DAY_BUTTON); // Resets the day and calories
-    show_data_button = calorie_gui->addButton(DATA_BUTTON);
+    data_button = calorie_gui->addButton(SHOW_DATA_BUTTON);
     
     // Events depending on which button
     calorie_add->onButtonEvent(this, &ofApp::onButtonEvent);
     calorie_remove->onButtonEvent(this, &ofApp::onButtonEvent);
     new_day_button->onButtonEvent(this, &ofApp::onButtonEvent);
-    show_data_button->onButtonEvent(this, &ofApp::onButtonEvent);
+    data_button->onButtonEvent(this, &ofApp::onButtonEvent);
 }
 
 void ofApp::dataGuiSetup() {
@@ -118,9 +117,17 @@ void ofApp::onButtonEvent(ofxDatGuiButtonEvent e) {
     } else if (e.target->getLabel() == CALORIE_REMOVE) {
         user.RemoveCaloriesFromInput();
         return;
-    } else if (e.target->getLabel() == "New Day") {
+    } else if (e.target->getLabel() == NEW_DAY_BUTTON) {
         user.NewDay();
         return;
+    } else if (e.target->getLabel() == SHOW_DATA_BUTTON) {
+        dataGuiSetup();
+        
+        data_button->setLabel(CLEAR_DATA_BUTTON);
+        return;
+    } else if (e.target->getLabel() == CLEAR_DATA_BUTTON) {
+        data_gui->setVisible(false);
+        data_button->setLabel(SHOW_DATA_BUTTON);;
     }
 }
 
