@@ -46,6 +46,7 @@ User CreateUserFromFile(string filename) {
     std::vector<string> user_info;
     string file_line;
     
+    
     if (file.fail()) {
         std::cout << "Unable to open file";
         exit(1);
@@ -53,6 +54,7 @@ User CreateUserFromFile(string filename) {
     
     while (std::getline(file, file_line)) {
         user_info.push_back(file_line);
+        std::cout << user_info.size() << endl;
     }
     
     returning_user.setAge(atoi(user_info[0].c_str()));
@@ -61,9 +63,11 @@ User CreateUserFromFile(string filename) {
     returning_user.setGender(user_info[3]);
     returning_user.setUserActivity(atoi(user_info[4].c_str()));
     returning_user.setCalories(atoi(user_info[5].c_str()));
-    
+
     for (int i = 6; i < user_info.size(); i++) {
-        returning_user.getCaloriesTracker().push_back(atoi(user_info[i].c_str()));
+        int calorie = atoi(user_info[i].c_str());
+        user.UpdateCalorieTracker();
+        std::cout << calorie << endl;
     }
     
     return returning_user;

@@ -4,6 +4,7 @@
 
 #include "user.h"
 #include "ofxDatGui.h"
+#include "constants.cpp"
 
 using std::cout;
 using std::cin;
@@ -135,7 +136,18 @@ double User::GetCaloriesPerMeal(int ActivityFactor, int MealNumbers) {
     return CalculateCalories(ActivityFactor) / MealNumbers;
 }
 
-// Below are user methods to keep track of calories
+/* ---------------------Methods used to get keep track of calories------------------- */
+
+void User::UpdateCalorieTracker(int num) {
+    if (calories_tracker.size() < MAX_DAYS) {
+        calories_tracker.push_back(num);
+        return;
+    } else {
+        calories_tracker.erase(calories_tracker.begin());
+        calories_tracker.push_back(num);
+    }
+}
+
 void User::AddCalories(int num) {
     calories_ += num;
 }
@@ -151,7 +163,7 @@ void User::ResetCalories() {
 
 // Pushes number of calories to the vector then resets calories
 void User::NewDay() {
-    calories_tracker.push_back(calories_);
+    UpdateCalorieTracker(calories_);
     ResetCalories();
 }
 

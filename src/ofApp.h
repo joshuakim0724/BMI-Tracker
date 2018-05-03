@@ -17,7 +17,15 @@ public:
     
     ofxDatGui* user_gui;
     ofxDatGui* calorie_gui;
+    ofxDatGui* data_gui;
+    
+    void userGuiSetup();
+    void calorieGuiSetup();
+    void dataGuiSetup();
+    
     ofxDatGuiLabel* calorie_label;
+    
+    ofxDatGuiSlider* slider;
     
     ofxDatGuiButton* clicker_button;
     ofxDatGuiButton* calorie_add;

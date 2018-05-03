@@ -61,10 +61,12 @@ public:
     double GetCaloriesPerMeal(int ActivityFactor, int MealNumbers);
 
     // Methods used to keep track of calories intake
+    void UpdateCalorieTracker(int num);
     void AddCalories(int num);
     void RemoveCalories(int num);
     void ResetCalories();
     void NewDay();
+    
     void AddCaloriesFromInput();
     void RemoveCaloriesFromInput();
     
