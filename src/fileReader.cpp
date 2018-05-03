@@ -54,7 +54,6 @@ User CreateUserFromFile(string filename) {
     
     while (std::getline(file, file_line)) {
         user_info.push_back(file_line);
-        std::cout << user_info.size() << endl;
     }
     
     returning_user.setAge(atoi(user_info[0].c_str()));
@@ -66,8 +65,7 @@ User CreateUserFromFile(string filename) {
 
     for (int i = 6; i < user_info.size(); i++) {
         int calorie = atoi(user_info[i].c_str());
-        user.UpdateCalorieTracker();
-        std::cout << calorie << endl;
+        returning_user.UpdateCalorieTracker(calorie);
     }
     
     return returning_user;

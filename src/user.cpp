@@ -153,7 +153,11 @@ void User::AddCalories(int num) {
 }
 
 void User::RemoveCalories(int num) {
-    calories_ -= num;
+    if (calories_ - num > 0) {
+        calories_ -= num;
+    } else {
+        calories_ = 0;
+    }
 }
 
 // Used to reset number of calories for the user when day is passed

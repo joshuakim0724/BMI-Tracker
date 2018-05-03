@@ -92,6 +92,7 @@ void ofApp::calorieGuiSetup() {
     calorie_add->onButtonEvent(this, &ofApp::onButtonEvent);
     calorie_remove->onButtonEvent(this, &ofApp::onButtonEvent);
     new_day_button->onButtonEvent(this, &ofApp::onButtonEvent);
+    show_data_button->onButtonEvent(this, &ofApp::onButtonEvent);
 }
 
 void ofApp::dataGuiSetup() {
@@ -99,6 +100,7 @@ void ofApp::dataGuiSetup() {
     data_gui->setPosition(ofGetWidth()/2.5, ofGetHeight()/2);
     
     setUpSliders();
+    data_gui->setEnabled(false);
 }
 
 void ofApp::onButtonEvent(ofxDatGuiButtonEvent e) {
@@ -167,26 +169,26 @@ bool ofApp::returningUser() {
 
 void ofApp::setUpSliders() {
     std::vector<int> calorie_data = user.getCaloriesTracker();
-    int calorie_goal = user.CalculateCalories(user.getUserActivity());
-    float accuracy = 0;
-    
-    cout << calorie_data.size();
-    
+    double calorie_goal = user.CalculateCalories(user.getUserActivity());
+    float accuracy;
+
     for (int i = 0; i < calorie_data.size(); i++) {
         string day = "Day " + to_string(i + 1);
-        
+
         if (calorie_data[i] > calorie_goal) {
-            accuracy = calorie_goal / calorie_data[i];
+            accuracy = (calorie_goal / calorie_data[i]) * 100;
         } else {
-            accuracy = calorie_data[i] / calorie_goal;
+            accuracy = (calorie_data[i] / calorie_goal) * 100;
         }
+        
         slider = data_gui->addSlider(day, 0, 100, accuracy);
+        slider->setLabelColor(ofColor::black);
+        slider->setStripeColor(ofColor::black);
+        
         if (accuracy < 80) {
             slider->setBackgroundColor(ofColor::red);
+        } else {
+            slider->setBackgroundColor(ofColor::green);
         }
     }
 }
-
-//    // Setting the button color
-//    button_->setStripeColor(ofColor::lightSkyBlue);
-//    calorie_add->setStripeColor(ofColor::red);
