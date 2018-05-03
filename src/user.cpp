@@ -67,13 +67,10 @@ void User::setCalories(int calories) {
 void User::setUserActivity(int factor) {
     this->activity_ = factor;
 }
+
 /* ---------------------Methods used to get average calories per day------------------- */
 bool User::IsMale() {
     return gender_ == "male";
-}
-
-double User::PoundToKg(double pound) {
-    return pound / KGPerPound;
 }
 
 // https://www.livestrong.com/article/238273-how-to-calculate-appropriate-calories-per-day/
@@ -99,8 +96,6 @@ double User::CalculateBMRFemale() {
 
 /**
  * Enter a number 0-10 from 0 being getting 0 exercise a week, to 10 being getting vigorous exercise everyday
- * @param number.
- * @return
  */
 double User::GetActivityFactor(int number) {
     switch (number) {
@@ -132,17 +127,25 @@ double User::CalculateCalories(int ActivityFactor) {
     }
 }
 
+/**
+ * Gets calories divided by how many meals u eat
+ */
 double User::GetCaloriesPerMeal(int ActivityFactor, int MealNumbers) {
     return CalculateCalories(ActivityFactor) / MealNumbers;
 }
 
 /* ---------------------Methods used to get keep track of calories------------------- */
 
+/**
+ * Updates the vector up to 10 elements
+ */
 void User::UpdateCalorieTracker(int num) {
     if (calories_tracker.size() < MAX_DAYS) {
         calories_tracker.push_back(num);
         return;
     } else {
+        
+        // Since vector is 10 or more elements, remove the first element
         calories_tracker.erase(calories_tracker.begin());
         calories_tracker.push_back(num);
     }
@@ -153,7 +156,7 @@ void User::AddCalories(int num) {
 }
 
 void User::RemoveCalories(int num) {
-    if (calories_ - num > 0) {
+    if (calories_ - num > 0) { // Makes sure it's not negative
         calories_ -= num;
     } else {
         calories_ = 0;
@@ -171,6 +174,7 @@ void User::NewDay() {
     ResetCalories();
 }
 
+// Adds calories from an user input
 void User::AddCaloriesFromInput() {
     string input_ = "";
     int num_calories = 0;
@@ -188,6 +192,7 @@ void User::AddCaloriesFromInput() {
     AddCalories(num_calories);
 }
 
+// Removes calories from an user input
 void User::RemoveCaloriesFromInput() {
     string input_ = "";
     int num_calories = 0;
@@ -204,9 +209,10 @@ void User::RemoveCaloriesFromInput() {
     }
     RemoveCalories(num_calories);
 }
-// These methods below will get user information from input boxes
+/* ---------------------Methods used to information from user input------------------- */
 
 // http://www.cplusplus.com/forum/articles/6046/ Used this to learn how to use cin correctly
+// Also used to figure out how myStream works
 void User::GetUserAge() {
     string input_ = "";
     int user_age = 0;
@@ -236,7 +242,7 @@ void User::GetUserWeight() {
         if (myStream >> user_weight) {
             break;
         }
-        input_ = ofSystemTextBoxDialog("Error: Invalid input, please try again");
+        input_ = ofSystemTextBoxDialog("Error: Invalid input, please enter weight again");
     }
     user_weight = roundf(user_weight);
     weight_ = user_weight;
@@ -254,7 +260,7 @@ void User::GetUserHeight() {
         if (myStream >> user_height) {
             break;
         }
-        input_ = ofSystemTextBoxDialog("Error: Invalid input, please try again");
+        input_ = ofSystemTextBoxDialog("Error: Invalid input, please enter height again");
     }
     user_height = roundf(user_height);
     height_ = user_height;
@@ -292,7 +298,7 @@ void User::GetUserActivity() {
                 break;
             }
         }
-        input_ = ofSystemTextBoxDialog("Error: Invalid input, please try again");
+        input_ = ofSystemTextBoxDialog("Error: Invalid input, please enter a number 0-10");
     }
     user_activity = roundf(user_activity);
     activity_ = user_activity;

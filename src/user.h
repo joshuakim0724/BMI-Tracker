@@ -51,7 +51,6 @@ public:
 
     // Methods used to get average calories per day
     bool IsMale();
-    double PoundToKg(double pound);
     double CalculateBMRMale();
     double CalculateBMRFemale();
 
